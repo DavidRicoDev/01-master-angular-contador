@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "01-master-angular-contador": {
+    "01-contador": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/01-master-angular-contador",
+            "outputPath": "dist/01-contador",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -50,7 +50,8 @@
                   "maximumError": "4kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "serviceWorker": "ngsw-config.json"
             },
             "development": {
               "optimization": false,
@@ -64,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "01-master-angular-contador:build:production"
+              "buildTarget": "01-contador:build:production"
             },
             "development": {
-              "buildTarget": "01-master-angular-contador:build:development"
+              "buildTarget": "01-contador:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -97,5 +98,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "60de794c-9ea2-4ef2-932a-5d565f8510df"
   }
 }
